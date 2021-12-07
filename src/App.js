@@ -1,7 +1,16 @@
 import React from 'react'
 import Sidebar from './components/Sidebar'
 import Dashboard from './screens/Dashboard'
-import CustomerDetails from './screens/CustomerDetails'
+import DeliveryPartner from './screens/DeliveryPartner'
+import OngoingOrder from './screens/OngoingOrder'
+import ViewOngoingOrder from './screens/ViewOngoingOrder'
+import RejectOrder from './screens/RejectOrder'
+import ViewRejectOrder from './screens/ViewRejectOrder'
+import CompletedOrder from './screens/CompletedOrder'
+import ViewCompletedOrder from './screens/ViewCompletedOrder'
+import Profile from './screens/Profile'
+import ProductList from './screens/ProductList'
+import ComboList from './screens/ComboList'
 import {
     BrowserRouter as Router,
     Route,
@@ -13,7 +22,16 @@ const App = () => {
         <Router>
             <Sidebar />
             <Switch>
-                <Route path="/customers" component={CustomerDetails} />
+                <Route path="/deliverypartner" component={DeliveryPartner} />
+                <Route path="/ongoing" component={OngoingOrder} />
+                <Route path="/viewongoing" component={ViewOngoingOrder} />
+                <Route path="/reject" component={RejectOrder} />
+                <Route path="/viewreject" component={ViewRejectOrder} />
+                <Route path="/completed" component={CompletedOrder} /> 
+                <Route path="/viewcompleted" component={ViewCompletedOrder} />            
+                <Route path="/profile" component={Profile} />
+                <Route path="/product" component={ProductList} />
+                <Route path="/combo" component={ComboList} />                
                 <Route path="/" exact component={Dashboard} />
             </Switch>
         </Router>

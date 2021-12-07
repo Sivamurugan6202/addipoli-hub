@@ -4,380 +4,179 @@ import { Link,NavLink } from 'react-router-dom'
 const Sidebar = () => {
     return (
         <div>
-                <div className="skin-default fixed-layout">
-        {/* <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <!-- <div className="preloader">
-            <div className="loader">
-                <div className="loader__figure"></div>
-                <p className="loader__label">Addipoli admin</p>
-            </div>
-        </div> -->
-        <!-- ============================================================== --> 
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== --> */}
-        <div id="main-wrapper">
-            {/* <!-- ============================================================== -->
-            <!-- Topbar header - style you can find in pages.scss -->
-            <!-- ============================================================== --> */}
-            <header className="topbar">
-                <nav className="navbar top-navbar navbar-expand-md navbar-dark">
+            <div className="skin-default fixed-layout">
+                {/* <!-- ============================================================== -->
+                <!-- Preloader - style you can find in spinners.css -->
+                <!-- ============================================================== --> */}
+                {/* <div className="preloader">
+                    <div className="loader">
+                        <div className="loader__figure"></div>
+                        <p className="loader__label">Addipoli admin</p>
+                    </div>
+                </div> */}
+                {/* <!-- ============================================================== --> 
+                <!-- Main wrapper - style you can find in pages.scss -->
+                <!-- ============================================================== --> */}
+                <div id="main-wrapper">
                     {/* <!-- ============================================================== -->
-                    <!-- Logo -->
+                    <!-- Topbar header - style you can find in pages.scss -->
                     <!-- ============================================================== --> */}
-                    <div className="navbar-header">
-                        <NavLink to="/dashboard" className="navbar-brand" >
+                    <header className="topbar">
+                        <nav className="navbar top-navbar navbar-expand-md navbar-dark">
+                            {/* <!-- ============================================================== -->
+                            <!-- Logo -->
+                            <!-- ============================================================== --> */}
+                            <div className="navbar-header">
+                                <a href="/" className="navbar-brand" >
 
-                            <b>
-                                {/* <!--You can put here icon as well // <i className="wi wi-sunset"></i> //-->
-                                <!-- Dark Logo icon --> */}
-                                <img src="assets/images/logo-icon.png" alt="homepage" className="dark-logo" />
-    
-                                <img src="assets/images/logo-light-icon.png" alt="homepage" className="light-logo" />
-                            </b>
-                            {/* <!--End Logo icon -->
-                            <!-- Logo text --> */}
-                            <span>
-                                {/* <!-- dark Logo text --> */}
-                                <img src="assets/images/logo-text.png" alt="homepage" className="dark-logo" />
-                                {/* <!-- Light Logo text --> */}
-                                <img src="assets/images/logo-light-text.png" className="light-logo" alt="homepage" />
-                            </span>
-                        </NavLink>
-                    </div>
+                                    <b>
+                                        {/* <!--You can put here icon as well // <i className="wi wi-sunset"></i> //-->
+                                        <!-- Dark Logo icon --> */}
+                                        {/* <img src="assets/images/logo.png" alt="homepage" className="dark-logo" style={{width: "50px"}}/>
+            
+                                        <img src="assets/images/logo.png" alt="homepage" className="light-logo" style={{width: "50px"}} /> */}
+                                    </b>
+                                    {/* <!--End Logo icon -->
+                                    <!-- Logo text --> */}
+                                    <span>
+                                        {/* <!-- dark Logo text --> */}
+                                        <img src="assets/images/logo-main.png" alt="homepage" className="dark-logo" style={{width: "100px", marginLeft:"30px"}} />
+                                        {/* <!-- Light Logo text --> */}
+                                        <img src="assets/images/logo-main.png" className="light-logo" alt="homepage" style={{width: "100px",marginLeft:"30px" }} />
+                                    </span>
+                                </a>
+                            </div>
+                            {/* <!-- ============================================================== -->
+                            <!-- End Logo -->
+                            <!-- ============================================================== --> */}
+                            <div className="navbar-collapse">
+                                {/* <!-- ============================================================== -->
+                                <!-- toggle and nav items -->
+                                <!-- ============================================================== --> */}
+                                <ul className="navbar-nav me-auto">
+                                    {/* <!-- This is  --> */}
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-toggler d-block d-md-none waves-effect waves-dark"
+                                            href="javascript:void(0)">
+                                            <i className="ti-menu"></i>
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
+                                            href="javascript:void(0)">
+                                            <i className="icon-menu"></i>
+                                        </a>
+                                    </li>
+                                    {/* <!-- ============================================================== -->
+                                    <!-- Search -->
+                                    <!-- ============================================================== --> */}
+                                    {/* <li className="nav-item">
+                                        <form className="app-search d-none d-md-block d-lg-block">
+                                            <input type="text" className="form-control" placeholder="Search & enter" />
+                                        </form>
+                                    </li> */}
+                                    <div class="row">
+                                    <div class="col-lg-12 bt-switch">
+                                        <div class="m-b-30">
+                                        <input type="checkbox" checked data-size="large" />
+                                        </div>
+                                    </div></div>
+                                </ul>
+                                {/* <!-- ============================================================== -->
+                                <!-- User profile and search -->
+                                <!-- ============================================================== --> */}
+                            </div>
+                        </nav>
+                    </header>
                     {/* <!-- ============================================================== -->
-                    <!-- End Logo -->
+                    <!-- End Topbar header -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Left Sidebar - style you can find in sidebar.scss  -->
                     <!-- ============================================================== --> */}
-                    <div className="navbar-collapse">
-                        {/* <!-- ============================================================== -->
-                        <!-- toggle and nav items -->
-                        <!-- ============================================================== --> */}
-                        <ul className="navbar-nav me-auto">
-                            {/* <!-- This is  --> */}
-                            <li className="nav-item">
-                                <a className="nav-link nav-toggler d-block d-md-none waves-effect waves-dark"
-                                    href="javascript:void(0)">
-                                    <i className="ti-menu"></i>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
-                                    href="javascript:void(0)">
-                                    <i className="icon-menu"></i>
-                                </a>
-                            </li>
-                            {/* <!-- ============================================================== -->
-                            <!-- Search -->
-                            <!-- ============================================================== --> */}
-                            <li className="nav-item">
-                                <form className="app-search d-none d-md-block d-lg-block">
-                                    <input type="text" className="form-control" placeholder="Search & enter" />
-                                </form>
-                            </li>
-                        </ul>
-                        {/* <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== --> */}
-                        <ul className="navbar-nav my-lg-0">
-                            {/* <!-- ============================================================== -->
-                            <!-- Comment -->
-                            <!-- ============================================================== --> */}
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle waves-effect waves-dark" href="#" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i className="ti-email"></i>
-                                    <div className="notify">
-                                        <span className="heartbit"></span>
-                                        <span className="point"></span>
+                    <aside className="left-sidebar">
+                        {/* <!-- Sidebar scroll--> */}
+                        <div className="scroll-sidebar">
+                            {/* <!-- User Profile--> */}
+                            <div className="user-profile">
+                                <div className="user-pro-body">
+                                    <div>
+                                        <img src="assets/images/logo.png" alt="user-img" className="img-circle" />
                                     </div>
-                                </a>
-                                <div className="dropdown-menu dropdown-menu-end mailbox animated bounceInDown">
-                                    <ul>
-                                        <li>
-                                            <div className="drop-title">Notifications</div>
-                                        </li>
-                                        <li>
-                                            <div className="message-center">
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="btn btn-danger btn-circle text-white">
-                                                        <i className="fa fa-link"></i>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Luanch Admin</h5>
-                                                        <span className="mail-desc">Just see the my new admin!</span>
-                                                        <span className="time">9:30 AM</span>
-                                                    </div>
-                                                </a>
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="btn btn-success btn-circle text-white">
-                                                        <i className="ti-calendar"></i>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Event today</h5>
-                                                        <span className="mail-desc">Just a reminder that you have event</span>
-                                                        <span className="time">9:10 AM</span>
-                                                    </div>
-                                                </a>
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="btn btn-info btn-circle text-white">
-                                                        <i className="ti-settings"></i>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Settings</h5>
-                                                        <span className="mail-desc">You can customize this template as you
-                                                            want</span>
-                                                        <span className="time">9:08 AM</span>
-                                                    </div>
-                                                </a>
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="btn btn-primary btn-circle">
-                                                        <i className="ti-user"></i>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Pavan kumar</h5>
-                                                        <span className="mail-desc">Just see the my admin!</span>
-                                                        <span className="time">9:02 AM</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a className="nav-link text-center link" href="javascript:void(0);">
-                                                <strong>Check all notifications</strong>
-                                                <i className="fa fa-angle-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            {/* <!-- ============================================================== -->
-                            <!-- End Comment -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- Messages -->
-                            <!-- ============================================================== --> */}
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle waves-effect waves-dark" href="#" id="2"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i className="icon-note"></i>
-                                    <div className="notify">
-                                        <span className="heartbit"></span>
-                                        <span className="point"></span>
+                                    <div className="dropdown">
+                                        <a href="javascript:void(0)" className="dropdown-toggle u-dropdown link hide-menu"
+                                            data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hub Admin
+                                            <span className="caret"></span>
+                                        </a>
+                                        <div className="dropdown-menu animated flipInY">
+                                            <a href="/profile" className="dropdown-item"><i className="ti-user"></i> My Profile</a>                                            
+                                            <a href="#" className="dropdown-item"><i className="fa fa-power-off"></i> Logout</a>
+                                        </div>
                                     </div>
-                                </a>
-                                <div className="dropdown-menu mailbox dropdown-menu-end animated bounceInDown"
-                                    aria-labelledby="2">
-                                    <ul>
-                                        <li>
-                                            <div className="drop-title">You have 4 new messages</div>
-                                        </li>
-                                        <li>
-                                            <div className="message-center">
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="user-img">
-                                                        <img src="assets/images/users/1.jpg" alt="user"
-                                                            className="img-circle" />
-                                                        <span className="profile-status online pull-right"></span>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Pavan kumar</h5>
-                                                        <span className="mail-desc">Just see the my admin!</span>
-                                                        <span className="time">9:30 AM</span>
-                                                    </div>
-                                                </a>
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="user-img">
-                                                        <img src="assets/images/users/2.jpg" alt="user"
-                                                            className="img-circle" />
-                                                        <span className="profile-status busy pull-right"></span>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Sonu Nigam</h5>
-                                                        <span className="mail-desc">I've sung a song! See you at</span>
-                                                        <span className="time">9:10 AM</span>
-                                                    </div>
-                                                </a>
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="user-img">
-                                                        <img src="assets/images/users/3.jpg" alt="user"
-                                                            className="img-circle" />
-                                                        <span className="profile-status away pull-right"></span>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Arijit Sinh</h5>
-                                                        <span className="mail-desc">I am a singer!</span>
-                                                        <span className="time">9:08 AM</span>
-                                                    </div>
-                                                </a>
-                                                {/* <!-- Message --> */}
-                                                <a href="javascript:void(0)">
-                                                    <div className="user-img">
-                                                        <img src="assets/images/users/4.jpg" alt="user"
-                                                            className="img-circle" />
-                                                        <span className="profile-status offline pull-right"></span>
-                                                    </div>
-                                                    <div className="mail-contnet">
-                                                        <h5>Pavan kumar</h5>
-                                                        <span className="mail-desc">Just see the my admin!</span>
-                                                        <span className="time">9:02 AM</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a className="nav-link text-center link" href="javascript:void(0);">
-                                                <strong>See all e-Mails</strong>
-                                                <i className="fa fa-angle-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            {/* <!-- ============================================================== -->
-                            <!-- End Messages -->
-                            <!-- ============================================================== --> */}
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            {/* <!-- ============================================================== -->
-            <!-- End Topbar header -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Left Sidebar - style you can find in sidebar.scss  -->
-            <!-- ============================================================== --> */}
-            <aside className="left-sidebar">
-                {/* <!-- Sidebar scroll--> */}
-                <div className="scroll-sidebar">
-                    {/* <!-- User Profile--> */}
-                    <div className="user-profile">
-                        <div className="user-pro-body">
-                            <div>
-                                <img src="assets/images/users/2.jpg" alt="user-img" className="img-circle" />
-                            </div>
-                            <div className="dropdown">
-                                <a href="javascript:void(0)" className="dropdown-toggle u-dropdown link hide-menu"
-                                    data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Main Admin
-                                    <span className="caret"></span>
-                                </a>
-                                <div className="dropdown-menu animated flipInY">
-                                    <a href="#" className="dropdown-item"><i className="ti-user"></i> My Profile</a>
-                                    <a href="#" className="dropdown-item"><i className="ti-wallet"></i> My Balance</a>
-                                    <a href="#" className="dropdown-item"> <i className="ti-settings"></i> Account Setting</a>
-                                    <a href="#" className="dropdown-item"><i className="fa fa-power-off"></i> Logout</a>
                                 </div>
                             </div>
+                            {/* <!-- Sidebar navigation--> */}
+                            <nav className="sidebar-nav">
+                                <ul id="sidebarnav">
+                                <li>
+                                        <a href="/" className="waves-effect waves-dark" >
+                                        <i className="icon-speedometer"></i>
+                                            <span className="hide-menu">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/product"  className="waves-effect waves-dark" >
+                                            <i className="ti-palette"></i>
+                                            <span className="hide-menu">Product List</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/combo"  className="waves-effect waves-dark" >
+                                            <i className="ti-palette"></i>
+                                            <span className="hide-menu">Combo List</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/ongoing"  className="waves-effect waves-dark" >
+                                            <i className="ti-pie-chart"></i>
+                                            <span className="hide-menu">Ongoing Orders</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a className="waves-effect waves-dark" href="/completed"
+                                            aria-expanded="false">
+                                            <i className="ti-layout-media-right-alt"></i>
+                                            <span className="hide-menu">Completed Orders</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/reject"  className="waves-effect waves-dark" >
+                                        <i className="ti-gallery"></i>
+                                            <span className="hide-menu">Rejectd Orders</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="waves-effect waves-dark" href="/deliverypartner"
+                                            aria-expanded="false">
+                                            <i className="ti-location-pin"></i>
+                                            <span className="hide-menu">Delivery Partner</span>
+                                        </a>
+                                    </li>
+                                    {/* <li>
+                                        <a className="waves-effect waves-dark" href="/enquiry"
+                                            aria-expanded="false">
+                                            <i className="ti-email"></i>
+                                            <span className="hide-menu">Enquiry</span>
+                                        </a>
+                                    </li>                                     */}
+                                </ul>
+                            </nav>
+                            {/* <!-- End Sidebar navigation --> */}
                         </div>
-                    </div>
-                    {/* <!-- Sidebar navigation--> */}
-                    <nav className="sidebar-nav">
-                        <ul id="sidebarnav">
-                        <li>
-                                <NavLink to="/" className="waves-effect waves-dark" >
-                                <i className="icon-speedometer"></i>
-                                    <span className="hide-menu">Dashboard</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/customers"  className="waves-effect waves-dark" >
-                                    <i className="ti-user"></i>
-                                    <span className="hide-menu">Customer Details</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/hub"  className="waves-effect waves-dark" >
-                                <i className="ti-gallery"></i>
-                                    <span className="hide-menu">Hub Details</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <a  className="has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                                    aria-expanded="false">
-                                    <i className="ti-pie-chart"></i>
-                                    <span className="hide-menu">Order Details</span>
-                                </a>
-                                <ul aria-expanded="false" className="collapse">
-                                    <li>
-                                        <a href="ongoing-order.php">Ongoing Orders</a>
-                                    </li>
-                                    <li>
-                                        <a href="reject-order.php">Rejectd Orders</a>
-                                    </li>
-                                    <li>
-                                        <a href="completed-order.php">Completed Orders</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a className="waves-effect waves-dark" href="delivery.php"
-                                    aria-expanded="false">
-                                    <i className="ti-location-pin"></i>
-                                    <span className="hide-menu">Delivery Partner</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className="waves-effect waves-dark" href="enquiry.php"
-                                    aria-expanded="false">
-                                    <i className="ti-email"></i>
-                                    <span className="hide-menu">Enquiry</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className="has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                                    aria-expanded="false">
-                                    <i className="ti-files"></i>
-                                    <span className="hide-menu">Product</span>
-                                </a>
-                                <ul aria-expanded="false" className="collapse">
-                                    <li>
-                                        <a href="product-list.php">Product List</a>
-                                    </li>
-                                    <li>
-                                        <a href="combo-list.php">Combo List</a>
-                                    </li>
-                                    <li>
-                                        <a href="coupon-list.php">Coupon Detail</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a className="waves-effect waves-dark" href="slider.php"
-                                    aria-expanded="false">
-                                    <i className="ti-layout-media-right-alt"></i>
-                                    <span className="hide-menu">Slider</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className="waves-effect waves-dark" href="gallery.php"
-                                    aria-expanded="false">
-                                    <i className="ti-palette"></i>
-                                    <span className="hide-menu">Gallery</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className="waves-effect waves-dark" href="blog.php"
-                                    aria-expanded="false">
-                                    <i className="ti-gallery"></i>
-                                    <span className="hide-menu">Blog</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    {/* <!-- End Sidebar navigation --> */}
+                        {/* <!-- End Sidebar scroll--> */}
+                    </aside>
                 </div>
-                {/* <!-- End Sidebar scroll--> */}
-            </aside>
-        </div>
-
-    </div>
+            </div>
         </div>
     )
 }
