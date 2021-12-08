@@ -75,7 +75,7 @@ const Profile = () => {
                                                         </div>
                                                     </div>                                                    
                                                 </div>
-                                                <input type="submit" class="btn btn-success me-2 text-white" name="submit" value="Submit"/>
+                                                <input type="submit" class="btn btn-success" name="submit" value="Submit"/>
                                                 <a href="/" type="submit" class="btn btn-dark" >Cancel</a>
                                             </div>
                                         </div>        

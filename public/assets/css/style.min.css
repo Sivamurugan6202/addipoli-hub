@@ -5,6 +5,11 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
+ tbody + thead {
+  display: none !important;
+}
+
+
 .fa,
 .fab,
 .fad,
@@ -21842,7 +21847,8 @@ textarea.form-control.is-invalid {
 .btn {
     display: inline-block;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.0;
+    font-family: 'Poppins';
     color: #212529;
     text-align: center;
     text-decoration: none;
@@ -21854,6 +21860,7 @@ textarea.form-control.is-invalid {
     padding: .375rem .75rem;
     font-size: .875rem;
     border-radius: .25rem;
+    margin-left: 10px;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
@@ -22106,14 +22113,14 @@ fieldset:disabled .btn {
 }
 
 .btn-danger {
-    color: #000;
+    color: #fff !important;
     background-color: #e46a76;
     border-color: #e46a76
 }
 
 .btn-danger:hover {
-    color: #000;
-    background-color: #e8808b;
+    color: #e8808b;
+    background-color: #fff;
     border-color: #e77984
 }
 
@@ -22130,7 +22137,7 @@ fieldset:disabled .btn {
 .btn-danger.active,
 .btn-danger:active,
 .show>.btn-danger.dropdown-toggle {
-    color: #000;
+    color: #fff;
     background-color: #e98891;
     border-color: #e77984
 }
@@ -22411,12 +22418,12 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-success {
-    color: #00c292;
-    border-color: #00c292
+    color: #00c292 !important;
+    border-color: #00c292 !important
 }
 
 .btn-outline-success:hover {
-    color: #000;
+    color: #fff !important;
     background-color: #00c292;
     border-color: #00c292
 }
@@ -22452,7 +22459,8 @@ fieldset:disabled .btn {
 
 .btn-outline-info {
     color: #03a9f3;
-    border-color: #03a9f3
+    border-color: #03a9f3;
+    margin-right: 10px
 }
 
 .btn-outline-info:hover {
@@ -42947,9 +42955,29 @@ fieldset:disabled .btn {
     border-radius: 100%;
     width: 40px;
     height: 40px;
-    padding: 10px
+    padding: 9px;
+    margin-left: 5px
 }
-
+.btn-success:hover {
+    color: #00c292;
+    background-color: #fff;
+    border-color: #00c292;    
+}
+.btn-danger:hover {
+    color: #e46a76 !important;
+    background-color: #fff;
+    border-color: #e46a76;    
+}
+.btn-info:hover {
+    color: #03a9f3;
+    background-color: #fff;
+    border-color: #03a9f3;    
+}
+.btn-dark:hover {
+    color: #343a40;
+    background-color: #fff;
+    border-color: #343a40;    
+}
 .btn-circle.btn-sm,
 .btn-group-sm>.btn-circle.btn {
     width: 35px;
@@ -44106,7 +44134,7 @@ a.list-group-item {
 .user-profile .user-pro-body img {
     width: 50px;
     display: block;
-    margin: 0 auto 10px
+    margin: -10px 5px 10px 5px
 }
 
 .user-profile .dropdown-menu {
@@ -45492,7 +45520,7 @@ ul.list-inline li {
 
 .page-titles {
     background: #fff;
-    padding: 14px 10px;
+    padding: 20px 10px 13px 10px;
     box-shadow: 1px 0 20px rgba(0, 0, 0, .08);
     margin: 0 -25px 25px -25px
 }
@@ -45535,6 +45563,7 @@ ul.list-inline li {
     padding: 17px 15px;
     right: 0;
     border-top: 1px solid #e9ecef;
+    font-family: 'Poppins';
     background: #fff
 }
 

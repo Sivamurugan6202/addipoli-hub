@@ -12,17 +12,24 @@ const ViewOngoingOrder = () => {
                         {/* <!-- ============================================================== -->
                         <!-- Bread crumb and right sidebar toggle -->
                         <!-- ============================================================== --> */}
-                        <div className="row page-titles">
+                         <div className="row page-titles">
                             <div className="col-md-5 align-self-center">
                                 <ol className="breadcrumb justify-content">
                                     <li className="breadcrumb-item">
                                         <a href="/">Home</a>
                                     </li>
                                     <li className="breadcrumb-item">
-                                        <a href="/completed">View Ongoing Orders</a>
+                                        <a href="/ongoing">Ongoing Order</a>
                                     </li>
-                                    <li className="breadcrumb-item active">Ongoing Order Details</li>
+                                    <li className="breadcrumb-item active">View Ongoing Order</li>
                                 </ol>
+                            </div>
+                            <div className="col-md-7 align-self-center text-end">
+                                <div className="d-flex justify-content-end align-items-center">
+                                    <a role="button" className="btn waves-effect waves-light btn-rounded btn-outline-info"  href="#">
+                                         Print
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         {/* <!-- ============================================================== -->

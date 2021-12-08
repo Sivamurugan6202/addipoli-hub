@@ -3,6 +3,72 @@ import React from 'react'
 const Dashboard = () => {
     return (
         <div>
+            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Order Details</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body form-body">                                                                            
+                            <form>
+                                <div class="mb-3">
+                                    <div className="form-group">
+                                        <label for="recipient-name" className="form-label">Order ID:</label>
+                                        <input type="text" className="form-control form-select" id="recipient-name" placeholder="Order ID" disabled/>
+                                    </div>
+                                </div>  
+                                <div class="mb-3">
+                                    <label for="recipient-name" className="form-label">Product Name:</label>
+                                    <input type="text" className="form-control form-select" id="recipient-name" placeholder="Product Name" disabled />
+                                </div>          
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@getbootstrap">Reject</button>
+                            <button type="button" className="btn btn-success" >Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="deleteModalLabel">Reject Order Reason</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body form-body">
+                            <div class="btn" role="group" aria-label="Basic checkbox toggle button group" style={{padding:"10px"}}>
+                                <input type="checkbox" class="btn-check"  id="btncheck1" autocomplete="off"/>
+                                <label class="btn waves-effect waves-light btn-rounded btn-outline-primary"  style={{margin:"10px"}} for="btncheck1">Checkbox 1</label>
+
+                                <input type="checkbox" class="btn-check"  id="btncheck2" autocomplete="off"/>
+                                <label class="btn waves-effect waves-light btn-rounded btn-outline-primary" style={{margin:"10px"}} for="btncheck2">Checkbox 2</label>
+
+                                <input type="checkbox" class="btn-check"  id="btncheck3" autocomplete="off"/>
+                                <label class="btn waves-effect waves-light btn-rounded btn-outline-primary" for="btncheck3">Checkbox 3</label>
+
+                                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off"/>
+                                <label class="btn waves-effect waves-light btn-rounded btn-outline-primary" style={{margin:"10px"}}  for="btncheck4">Checkbox 4</label>
+
+                                <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off"/>
+                                <label class="btn waves-effect waves-light btn-rounded btn-outline-primary" style={{margin:"10px"}} for="btncheck5">Checkbox 5</label>
+                            </div>
+                            <div className="mb-3">
+                                <div className="form-group">
+                                    <label for="message-text" className="form-label">Message:</label>
+                                    <textarea class="form-control form-select" id="message-text"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                <button type="button" className="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="skin-default fixed-layout">
                 <div className="page-wrapper">
                     {/* <!-- ============================================================== -->
@@ -13,11 +79,22 @@ const Dashboard = () => {
                         <!-- Bread crumb and right sidebar toggle -->
                         <!-- ============================================================== --> */}
                         <div className="row page-titles">
-                            <div className="col-md-12 align-self-center">
+                            <div className="col-md-5 align-self-center">
                                 <ol className="breadcrumb justify-content">
+                                    <li className="breadcrumb-item">
+                                        <a href="/">Home</a>
+                                    </li>
                                     <li className="breadcrumb-item active">Dashboard</li>
                                 </ol>
                             </div>
+                            <div className="col-md-7 align-self-center text-end">
+                                <div className="d-flex justify-content-end align-items-center">
+                                    <a role="button" className="btn waves-effect waves-light btn-rounded btn-outline-success"  href="/addorder">
+                                         Add New Order
+                                    </a>
+                                </div>
+                            </div>
+                            
                         </div>
                         {/* <!-- ============================================================== -->
                         <!-- End Bread crumb and right sidebar toggle -->
@@ -25,7 +102,14 @@ const Dashboard = () => {
                         <!-- ============================================================== -->
                         <!-- Start Page Content -->
                         <!-- ============================================================== --> */}
-                        <div class="row">                    
+                        <div class="row"> 
+                            <div className="col-lg-12 align-self-center text-end">
+                                <div className="d-flex justify-content-end align-items-center">
+                                    <a role="button" className="btn waves-effect waves-light btn-rounded btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                                         Ongoing Order
+                                    </a>
+                                </div>
+                            </div>                   
                             <div class="col-lg-3 col-md-6">
                                 <div class="card">
                                     <div class="card-body">

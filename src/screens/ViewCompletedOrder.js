@@ -57,6 +57,10 @@ const ViewCompletedOrder = () => {
                                                         <td>Coimbatore</td>
                                                     </tr>
                                                     <tr>
+                                                        <th>Delivery Partner Name</th>
+                                                        <td>Kovai Boys</td>
+                                                    </tr>
+                                                    <tr>
                                                         <th>Delivery Person Name</th>
                                                         <td>Siva</td>
                                                     </tr>

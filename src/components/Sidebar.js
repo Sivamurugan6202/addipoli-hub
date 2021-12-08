@@ -67,24 +67,44 @@ const Sidebar = () => {
                                             <i className="icon-menu"></i>
                                         </a>
                                     </li>
-                                    {/* <!-- ============================================================== -->
-                                    <!-- Search -->
-                                    <!-- ============================================================== --> */}
-                                    {/* <li className="nav-item">
-                                        <form className="app-search d-none d-md-block d-lg-block">
-                                            <input type="text" className="form-control" placeholder="Search & enter" />
-                                        </form>
-                                    </li> */}
-                                    <div class="row">
-                                    <div class="col-lg-12 bt-switch">
-                                        <div class="m-b-30">
-                                        <input type="checkbox" checked data-size="large" />
-                                        </div>
-                                    </div></div>
                                 </ul>
                                 {/* <!-- ============================================================== -->
-                                <!-- User profile and search -->
+                                    <!-- Switch Button -->
+                                    <!-- ============================================================== --> */}
+                                    <div class="row">
+                                        <div class="col-5 bt-switch">
+                                            <div class="m-b-30">
+                                                <input type="checkbox" checked data-size="large" />
+                                            </div>
+                                        </div>   
+                                        {/* <div className="col-9 align-self-center text-end" >
+                                            <div className="d-flex justify-content-end align-items-center">
+                                                <a role="button" className="btn waves-effect waves-light btn-rounded btn-outline-success" style={{width:"180px",marginLeft:"30px"}} href="/addorder">
+                                                     Add New Order
+                                                </a>
+                                            </div>
+                                        </div> */}
+                                    </div>
+
+
+                                {/* <!-- ============================================================== -->
+                                <!-- User profile -->
                                 <!-- ============================================================== --> */}
+                                <div className="user-profile">
+                                <div className="user-pro-body">
+                                  <div className="dropdown" style={{marginRight:"20px"}}>
+                                    <div><img src="assets/images/users/2.png" alt="user-img" className="img-circle dropdown-toggle u-dropdown link hide-menu" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" />                   
+                                        <div className="dropdown-menu animated flipInY"  style={{marginRight:"10px", marginTop:"50px" }} >
+                                            <a href="/profile" className="dropdown-item"><i className="ti-user"></i> My Profile</a>                                            
+                                            <a href="#"  className="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                                              <path d="M7.5 1v7h1V1h-1z"/>
+                                              <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+                                            </svg> Logout</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                             </div>
                         </nav>
                     </header>
@@ -96,29 +116,11 @@ const Sidebar = () => {
                     <!-- ============================================================== --> */}
                     <aside className="left-sidebar">
                         {/* <!-- Sidebar scroll--> */}
-                        <div className="scroll-sidebar">
-                            {/* <!-- User Profile--> */}
-                            <div className="user-profile">
-                                <div className="user-pro-body">
-                                    <div>
-                                        <img src="assets/images/logo.png" alt="user-img" className="img-circle" />
-                                    </div>
-                                    <div className="dropdown">
-                                        <a href="javascript:void(0)" className="dropdown-toggle u-dropdown link hide-menu"
-                                            data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hub Admin
-                                            <span className="caret"></span>
-                                        </a>
-                                        <div className="dropdown-menu animated flipInY">
-                                            <a href="/profile" className="dropdown-item"><i className="ti-user"></i> My Profile</a>                                            
-                                            <a href="#" className="dropdown-item"><i className="fa fa-power-off"></i> Logout</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="scroll-sidebar">    
                             {/* <!-- Sidebar navigation--> */}
                             <nav className="sidebar-nav">
                                 <ul id="sidebarnav">
-                                <li>
+                                    <li>
                                         <a href="/" className="waves-effect waves-dark" >
                                         <i className="icon-speedometer"></i>
                                             <span className="hide-menu">Dashboard</span>
@@ -162,13 +164,24 @@ const Sidebar = () => {
                                             <span className="hide-menu">Delivery Partner</span>
                                         </a>
                                     </li>
-                                    {/* <li>
-                                        <a className="waves-effect waves-dark" href="/enquiry"
-                                            aria-expanded="false">
-                                            <i className="ti-email"></i>
-                                            <span className="hide-menu">Enquiry</span>
+                                    <li>
+                                        <a
+                                        className="has-arrow waves-effect waves-dark"
+                                        href="javascript:void(0)"
+                                        aria-expanded="false"
+                                        >
+                                        <i className="ti-pie-chart"></i>
+                                        <span className="hide-menu">Sales Report</span>
                                         </a>
-                                    </li>                                     */}
+                                        <ul aria-expanded="false" className="collapse">
+                                        <li>
+                                            <a href="/dailyreport">Daily Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="/monthlyreport">Monthly Report</a>
+                                        </li>                      
+                                        </ul>
+                                    </li>                               
                                 </ul>
                             </nav>
                             {/* <!-- End Sidebar navigation --> */}
